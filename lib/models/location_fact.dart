@@ -1,9 +1,7 @@
 class LocationFact {
   final String title;
   final String text;
+  final String reviews;
 
-  LocationFact(this.text, this.title);
-
+  LocationFact(this.title, this.text, this.reviews);
 }
-
-

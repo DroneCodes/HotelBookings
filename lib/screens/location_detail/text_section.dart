@@ -7,10 +7,12 @@ class TextSection extends StatelessWidget {
   // how to define a private member
   final String _title;
   final String _body;
+  final String _reviews;
   // define a static constant for the padding
   static const double _hPad = 16.0;
 
-  TextSection(this._title, this._body); // this are positional parametres
+  TextSection(
+      this._title, this._body, this._reviews); // this are positional parametres
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +22,17 @@ class TextSection extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(_hPad, 32, _hPad, 4),
-            child: Text(_title, style: Theme.of(context).textTheme.titleMedium),
-            ),
-            Container(
+            child: Text(_title, style: Theme.of(context).textTheme.titleLarge),
+          ),
+          Container(
             padding: const EdgeInsets.fromLTRB(_hPad, 10, _hPad, _hPad),
-            child: Text(_body, style: Theme.of(context).textTheme.bodyText1),
-            ),
-            
-          
+            child: Text(_body, style: Theme.of(context).textTheme.bodyMedium),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(_hPad, 8, _hPad, _hPad),
+            child:
+                Text(_reviews, style: Theme.of(context).textTheme.bodyMedium),
+          ),
         ]);
   }
 }
